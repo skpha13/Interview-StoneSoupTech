@@ -1,5 +1,11 @@
 # interview
 
+## Observations:
+- Approach
+  ##### I have used a graph approach, meaning that i stored an adjacency list where Adjacency[i][j] = id of comment j which is a reply to comment i
+- Complexity:
+  ##### Right now the complexity is O((m + n) * n) [m+n for graph traversel and * n for looking up elements in the comments array] where m is the number of edges in the adjacency list, and n the number of comments. A small problem would be that i kept the comments id as the values in the adjacency list to reduce memory, but time is affected, because i have to search for a comment in the array of comments with the given id. A solution would be to use a hashmap with key = id and value = comment with that id 
+
 This template should help get you started developing with Vue 3 in Vite.
 
 ## Recommended IDE Setup
